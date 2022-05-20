@@ -4,11 +4,10 @@ schema:
 dataSources:
   - kind: ethereum/contract
     name: YourContract
-    network: localhost
+    network: godwoken
     source:
-      address: "0x5FbDB2315678afecb367f032d93F642f64180aa3"
       abi: YourContract
-      startBlock: 1
+      address: "0x668eD30aAcC7C7c206aAF1327d733226416233E2"
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.6
@@ -18,7 +17,7 @@ dataSources:
         - Sender
       abis:
         - name: YourContract
-          file: ./abis/localhost_YourContract.json
+          file: ./abis/godwoken_YourContract.json
       eventHandlers:
         - event: SetPurpose(address,string)
           handler: handleSetPurpose
